@@ -21,7 +21,7 @@ import type { PortfolioData } from '../types/portfolio';
 import { Reveal } from './Reveal';
 import { SectionHeading } from './SectionHeading';
 
-const Section = styled(Box)(({ theme }) => ({
+const Section = styled('section')(({ theme }) => ({
   paddingBlock: theme.spacing(11),
 }));
 
@@ -60,7 +60,7 @@ export function Projects({ data }: ProjectsProps) {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <Section component="section" id="projects" aria-labelledby="projects-title">
+    <Section id="projects" aria-labelledby="projects-title">
       <Container maxWidth="lg">
         <Reveal>
           <SectionHeading
@@ -80,7 +80,7 @@ export function Projects({ data }: ProjectsProps) {
                 onMouseLeave={() => setHovered(null)}
               >
                 <CardContent sx={{ p: 3, flexGrow: 1 }}>
-                  <Typography variant="overline" color="primary.main" fontWeight={900}>
+                  <Typography variant="overline" color="primary.main" sx={{ fontWeight: 900 }}>
                     Project {String(index + 1).padStart(2, '0')}
                   </Typography>
                   <Typography variant="h4" sx={{ mt: 0.8 }}>
@@ -98,13 +98,13 @@ export function Projects({ data }: ProjectsProps) {
                         </ListItemIcon>
                         <ListItemText
                           primary={highlight}
-                          primaryTypographyProps={{ variant: 'body2', color: 'text.secondary' }}
+                          slotProps={{ primary: { variant: 'body2', sx: { color: 'text.secondary' } } }}
                         />
                       </ListItem>
                     ))}
                   </List>
 
-                  <Stack direction="row" flexWrap="wrap" gap={0.8} sx={{ mt: 2 }}>
+                  <Stack direction="row" sx={{ mt: 2, flexWrap: 'wrap', gap: 0.8 }}>
                     {project.technologies.map((technology) => (
                       <Chip key={technology} label={technology} size="small" />
                     ))}

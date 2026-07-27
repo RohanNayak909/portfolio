@@ -13,8 +13,10 @@ export function Footer({ data }: FooterProps) {
         <Stack
           direction={{ xs: 'column', sm: 'row' }}
           spacing={1}
-          justifyContent="space-between"
-          alignItems={{ xs: 'flex-start', sm: 'center' }}
+          sx={{
+            justifyContent: 'space-between',
+            alignItems: { xs: 'flex-start', sm: 'center' },
+          }}
         >
           <Typography color="text.secondary" variant="body2">
             © {new Date().getFullYear()} {data.personal.name}. All rights reserved.

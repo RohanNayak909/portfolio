@@ -21,7 +21,7 @@ import { GitHubSpotlight } from './GitHubSpotlight';
 import { Reveal } from './Reveal';
 import { SectionHeading } from './SectionHeading';
 
-const Section = styled(Box)(({ theme }) => ({
+const Section = styled('section')(({ theme }) => ({
   paddingBlock: theme.spacing(11),
 }));
 
@@ -88,7 +88,7 @@ export function Contact({ data }: ContactProps) {
   };
 
   return (
-    <Section component="section" id="contact" aria-labelledby="contact-title">
+    <Section id="contact" aria-labelledby="contact-title">
       <Container maxWidth="lg">
         <Reveal>
           <SectionHeading
@@ -168,9 +168,11 @@ export function Contact({ data }: ContactProps) {
               <Stack
                 direction={{ xs: 'column', sm: 'row' }}
                 spacing={1.5}
-                justifyContent="space-between"
-                alignItems={{ xs: 'stretch', sm: 'center' }}
-                sx={{ mt: 2.5 }}
+                sx={{
+                  mt: 2.5,
+                  justifyContent: 'space-between',
+                  alignItems: { xs: 'stretch', sm: 'center' },
+                }}
               >
                 <Typography variant="body2" color="text.secondary">
                   All fields are required.
@@ -196,13 +198,13 @@ export function Contact({ data }: ContactProps) {
               >
                 <Typography variant="h5">Direct contact</Typography>
                 <Stack spacing={1.5} sx={{ mt: 2 }}>
-                  <Stack direction="row" spacing={1.2} alignItems="center">
+                  <Stack direction="row" spacing={1.2} sx={{ alignItems: 'center' }}>
                     <EmailRoundedIcon color="primary" />
                     <Link href={`mailto:${data.personal.email}`} underline="hover">
                       {data.personal.email}
                     </Link>
                   </Stack>
-                  <Stack direction="row" spacing={1.2} alignItems="center">
+                  <Stack direction="row" spacing={1.2} sx={{ alignItems: 'center' }}>
                     <PhoneRoundedIcon color="primary" />
                     <Link href={`tel:${data.personal.phone.replace(/\s/g, '')}`} underline="hover">
                       {data.personal.phone}

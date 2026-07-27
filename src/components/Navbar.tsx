@@ -66,10 +66,9 @@ export function Navbar({ data, mode, onToggleMode }: NavbarProps) {
         <Toolbar disableGutters sx={{ minHeight: 72 }}>
           <Stack
             direction="row"
-            alignItems="center"
             spacing={1.4}
             onClick={() => navigate('home')}
-            sx={{ cursor: 'pointer', mr: 'auto' }}
+            sx={{ cursor: 'pointer', mr: 'auto', alignItems: 'center' }}
             role="button"
             tabIndex={0}
             onKeyDown={(event) => {
@@ -78,7 +77,7 @@ export function Navbar({ data, mode, onToggleMode }: NavbarProps) {
           >
             <BrandBadge>{data.personal.initials}</BrandBadge>
             <Box>
-              <Typography variant="subtitle1" fontWeight={900} lineHeight={1.05}>
+              <Typography variant="subtitle1" sx={{ fontWeight: 900, lineHeight: 1.05 }}>
                 {data.personal.name}
               </Typography>
               <Typography variant="caption" color="text.secondary">
@@ -89,9 +88,8 @@ export function Navbar({ data, mode, onToggleMode }: NavbarProps) {
 
           <Stack
             direction="row"
-            alignItems="center"
             spacing={0.5}
-            sx={{ display: { xs: 'none', md: 'flex' } }}
+            sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}
           >
             {data.navigation.map((item) => (
               <Button
@@ -112,9 +110,8 @@ export function Navbar({ data, mode, onToggleMode }: NavbarProps) {
 
           <Stack
             direction="row"
-            alignItems="center"
             spacing={0.5}
-            sx={{ display: { xs: 'flex', md: 'none' } }}
+            sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center' }}
           >
             <IconButton onClick={onToggleMode} aria-label="Toggle color theme">
               {mode === 'dark' ? <LightModeRoundedIcon /> : <DarkModeRoundedIcon />}
@@ -133,7 +130,7 @@ export function Navbar({ data, mode, onToggleMode }: NavbarProps) {
               <ListItemButton key={item.target} onClick={() => navigate(item.target)}>
                 <ListItemText
                   primary={item.label}
-                  primaryTypographyProps={{ fontWeight: 800 }}
+                  slotProps={{ primary: { sx: { fontWeight: 800 } } }}
                 />
               </ListItemButton>
             ))}

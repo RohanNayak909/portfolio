@@ -4,7 +4,7 @@ import type { PortfolioData } from '../types/portfolio';
 import { Reveal } from './Reveal';
 import { SectionHeading } from './SectionHeading';
 
-const Section = styled(Box)(({ theme }) => ({
+const Section = styled('section')(({ theme }) => ({
   paddingBlock: theme.spacing(11),
   backgroundColor:
     theme.palette.mode === 'dark' ? theme.palette.background.paper : '#f3f7fb',
@@ -40,7 +40,7 @@ interface SkillsProps {
 
 export function Skills({ data }: SkillsProps) {
   return (
-    <Section component="section" id="skills" aria-labelledby="skills-title">
+    <Section id="skills" aria-labelledby="skills-title">
       <Container maxWidth="lg">
         <Reveal>
           <SectionHeading
@@ -58,7 +58,7 @@ export function Skills({ data }: SkillsProps) {
                 <Typography color="text.secondary" sx={{ mt: 0.7, mb: 2.3 }}>
                   {group.summary}
                 </Typography>
-                <Stack direction="row" flexWrap="wrap" gap={1}>
+                <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1 }}>
                   {group.skills.map((skill) => (
                     <Chip
                       key={skill}

@@ -18,7 +18,7 @@ import type { PortfolioData } from '../types/portfolio';
 import { Reveal } from './Reveal';
 import { SectionHeading } from './SectionHeading';
 
-const Section = styled(Box)(({ theme }) => ({
+const Section = styled('section')(({ theme }) => ({
   paddingBlock: theme.spacing(11),
   backgroundColor:
     theme.palette.mode === 'dark' ? theme.palette.background.paper : '#f3f7fb',
@@ -30,7 +30,7 @@ interface ExperienceProps {
 
 export function Experience({ data }: ExperienceProps) {
   return (
-    <Section component="section" id="experience" aria-labelledby="experience-title">
+    <Section id="experience" aria-labelledby="experience-title">
       <Container maxWidth="lg">
         <Reveal>
           <SectionHeading
@@ -54,7 +54,7 @@ export function Experience({ data }: ExperienceProps) {
                   elevation={0}
                   sx={{ p: { xs: 2.5, md: 4 }, borderRadius: 5, border: '1px solid', borderColor: 'divider' }}
                 >
-                  <Stack direction="row" spacing={1.5} alignItems="flex-start">
+                  <Stack direction="row" spacing={1.5} sx={{ alignItems: 'flex-start' }}>
                     <Box
                       sx={{
                         width: 48,
@@ -71,7 +71,7 @@ export function Experience({ data }: ExperienceProps) {
                     </Box>
                     <Box>
                       <Typography variant="h4">{item.role}</Typography>
-                      <Typography color="primary.main" fontWeight={900} sx={{ mt: 0.4 }}>
+                      <Typography color="primary.main" sx={{ mt: 0.4, fontWeight: 900 }}>
                         {item.company} · {item.period}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
@@ -91,7 +91,7 @@ export function Experience({ data }: ExperienceProps) {
                         </ListItemIcon>
                         <ListItemText
                           primary={responsibility}
-                          primaryTypographyProps={{ color: 'text.secondary' }}
+                          slotProps={{ primary: { sx: { color: 'text.secondary' } } }}
                         />
                       </ListItem>
                     ))}
@@ -106,14 +106,14 @@ export function Experience({ data }: ExperienceProps) {
               elevation={0}
               sx={{ p: 3, borderRadius: 5, border: '1px solid', borderColor: 'divider', height: 'fit-content' }}
             >
-              <Stack direction="row" spacing={1.2} alignItems="center">
+              <Stack direction="row" spacing={1.2} sx={{ alignItems: 'center' }}>
                 <SchoolRoundedIcon color="primary" />
                 <Typography variant="h5">Education</Typography>
               </Stack>
               <Divider sx={{ my: 2 }} />
               {data.education.map((education) => (
                 <Box key={education.degree}>
-                  <Typography fontWeight={900}>{education.degree}</Typography>
+                  <Typography sx={{ fontWeight: 900 }}>{education.degree}</Typography>
                   <Typography color="text.secondary" sx={{ mt: 0.5 }}>
                     {education.institution}
                   </Typography>

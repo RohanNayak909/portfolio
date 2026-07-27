@@ -63,10 +63,10 @@ export function GitHubSpotlight({ apiUrl, fallbackAvatar }: GitHubSpotlightProps
 
       {!loading && profile && (
         <Stack spacing={2.2}>
-          <Stack direction="row" spacing={1.5} alignItems="center">
+          <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
             <Avatar src={profile.avatar_url || fallbackAvatar} alt="GitHub profile" sx={{ width: 58, height: 58 }} />
             <Box>
-              <Stack direction="row" spacing={0.8} alignItems="center">
+              <Stack direction="row" spacing={0.8} sx={{ alignItems: 'center' }}>
                 <GitHubIcon />
                 <Typography variant="h5">GitHub</Typography>
               </Stack>
@@ -100,7 +100,7 @@ export function GitHubSpotlight({ apiUrl, fallbackAvatar }: GitHubSpotlightProps
       )}
 
       {!loading && error && !profile && (
-        <Stack spacing={1.5} alignItems="flex-start">
+        <Stack spacing={1.5} sx={{ alignItems: 'flex-start' }}>
           <GitHubIcon color="primary" />
           <Typography variant="h5">GitHub profile</Typography>
           <Typography color="text.secondary">

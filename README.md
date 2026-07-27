@@ -58,6 +58,16 @@ npm run preview
 
 The production output is created in `dist/`.
 
+## Material UI v9 compatibility
+
+The source uses the current MUI v9 styling APIs:
+
+- Layout and typography styling is placed in the `sx` prop.
+- `ListItemText` customization uses `slotProps`.
+- Semantic sections are rendered with `styled('section')`.
+
+These patterns avoid the removed shorthand system props that cause TypeScript build errors in MUI v9.
+
 ## Update portfolio content
 
 Edit only:

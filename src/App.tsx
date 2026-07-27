@@ -103,7 +103,7 @@ function App() {
         <CssBaseline />
         <Box sx={{ minHeight: '100vh', display: 'grid', placeItems: 'center', p: 3 }}>
           <Alert severity="error" sx={{ maxWidth: 680 }}>
-            <Typography fontWeight={900}>Portfolio data could not be loaded.</Typography>
+            <Typography sx={{ fontWeight: 900 }}>Portfolio data could not be loaded.</Typography>
             <Typography variant="body2">{loadError}</Typography>
           </Alert>
         </Box>

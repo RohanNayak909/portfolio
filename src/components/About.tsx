@@ -7,7 +7,7 @@ import type { PortfolioData } from '../types/portfolio';
 import { Reveal } from './Reveal';
 import { SectionHeading } from './SectionHeading';
 
-const Section = styled(Box)(({ theme }) => ({
+const Section = styled('section')(({ theme }) => ({
   paddingBlock: theme.spacing(11),
   backgroundColor: theme.palette.background.default,
 }));
@@ -57,7 +57,7 @@ export function About({ data }: AboutProps) {
   ];
 
   return (
-    <Section component="section" id="about" aria-labelledby="about-title">
+    <Section id="about" aria-labelledby="about-title">
       <Container maxWidth="lg">
         <Reveal>
           <SectionHeading
@@ -82,10 +82,10 @@ export function About({ data }: AboutProps) {
                     `linear-gradient(145deg, ${theme.palette.background.paper}, ${theme.palette.primary.main}0D)`,
                 }}
               >
-                <Typography variant="h4" color="primary.main" fontWeight={900}>
+                <Typography variant="h4" color="primary.main" sx={{ fontWeight: 900 }}>
                   {stat.value}
                 </Typography>
-                <Typography color="text.secondary" fontWeight={700} sx={{ mt: 0.7 }}>
+                <Typography color="text.secondary" sx={{ mt: 0.7, fontWeight: 700 }}>
                   {stat.label}
                 </Typography>
               </Paper>

@@ -14,7 +14,7 @@ import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 import type { PortfolioData } from '../types/portfolio';
 
-const HeroRoot = styled(Box)(({ theme }) => ({
+const HeroRoot = styled('section')(({ theme }) => ({
   minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
@@ -91,7 +91,7 @@ export function Hero({ data }: HeroProps) {
   };
 
   return (
-    <HeroRoot component="section" id="home" aria-labelledby="hero-title">
+    <HeroRoot id="home" aria-labelledby="hero-title">
       <Container maxWidth="lg">
         <HeroGrid>
           <Box>
@@ -101,7 +101,7 @@ export function Hero({ data }: HeroProps) {
               variant="outlined"
               sx={{ mb: 2.5, fontWeight: 800 }}
             />
-            <Typography variant="h5" color="text.secondary" fontWeight={700}>
+            <Typography variant="h5" color="text.secondary" sx={{ fontWeight: 700 }}>
               Hello, I&apos;m {data.personal.name}
             </Typography>
             <GradientTitle
@@ -153,11 +153,14 @@ export function Hero({ data }: HeroProps) {
             <Stack
               direction="row"
               spacing={0.7}
-              alignItems="center"
-              sx={{ mt: 3, justifyContent: { xs: 'center', md: 'flex-start' } }}
+              sx={{
+                mt: 3,
+                alignItems: 'center',
+                justifyContent: { xs: 'center', md: 'flex-start' },
+              }}
             >
               <LocationOnRoundedIcon color="primary" fontSize="small" />
-              <Typography color="text.secondary" fontWeight={700}>
+              <Typography color="text.secondary" sx={{ fontWeight: 700 }}>
                 {data.personal.location}
               </Typography>
             </Stack>
@@ -196,7 +199,7 @@ export function Hero({ data }: HeroProps) {
               <Typography variant="caption" color="text.secondary">
                 Core focus
               </Typography>
-              <Typography fontWeight={900}>Java · Spring · Web</Typography>
+              <Typography sx={{ fontWeight: 900 }}>Java · Spring · Web</Typography>
             </Paper>
           </PortraitFrame>
         </HeroGrid>
