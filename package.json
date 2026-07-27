@@ -30,7 +30,7 @@
     "eslint-plugin-react-refresh": "latest",
     "gh-pages": "latest",
     "globals": "latest",
-    "typescript": "7.0.2",
+    "typescript": "5.9.3",
     "typescript-eslint": "latest",
     "vite": "8.1.5"
   },
