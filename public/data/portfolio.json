@@ -1,0 +1,159 @@
+{
+  "personal": {
+    "name": "Rohan Nayak",
+    "initials": "RN",
+    "headline": "Java Full Stack Engineer",
+    "subheadline": "Building enterprise web, API, mobile and cloud-enabled applications",
+    "summary": "Full-stack software engineer with 5 years of experience delivering enterprise applications and backend services. Strong in Java, Spring Boot, Angular, Next.js and database-first implementation, with working experience across React, Node.js, AWS services, mobile release workflows and production support.",
+    "location": "Bhubaneswar, India",
+    "email": "rohandarkbull@gmail.com",
+    "phone": "+91 9776311909",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/75715641?v=4",
+    "resumeUrl": "assets/Rohan_Nayak_Resume.pdf",
+    "availability": "Open to full-stack engineering opportunities"
+  },
+  "navigation": [
+    { "label": "Home", "target": "home" },
+    { "label": "About", "target": "about" },
+    { "label": "Skills", "target": "skills" },
+    { "label": "Projects", "target": "projects" },
+    { "label": "Experience", "target": "experience" },
+    { "label": "Contact", "target": "contact" }
+  ],
+  "stats": [
+    { "value": "5+", "label": "Years of experience" },
+    { "value": "Full SDLC", "label": "Idea to production" },
+    { "value": "Web · API · Data", "label": "Cross-layer ownership" }
+  ],
+  "skillGroups": [
+    {
+      "category": "Java & Backend",
+      "summary": "Enterprise services, integrations and business logic",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Spring MVC",
+        "REST APIs",
+        "Node.js",
+        "Express.js",
+        "API Gateway",
+        "GraphQL fundamentals"
+      ]
+    },
+    {
+      "category": "Frontend",
+      "summary": "Responsive, component-driven web applications",
+      "skills": [
+        "Angular",
+        "React",
+        "React Hooks",
+        "Redux",
+        "Context API",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Vite",
+        "Tailwind CSS",
+        "Material UI",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "category": "Data & Caching",
+      "summary": "Database-first implementation and query optimization",
+      "skills": [
+        "PostgreSQL",
+        "MySQL",
+        "Stored procedures",
+        "Functions",
+        "Schema design",
+        "Query optimization",
+        "Redis",
+        "MongoDB fundamentals",
+        "DynamoDB fundamentals"
+      ]
+    },
+    {
+      "category": "Cloud, Mobile & Delivery",
+      "summary": "Deployment, troubleshooting and release support",
+      "skills": [
+        "AWS working knowledge",
+        "Amazon S3",
+        "API Gateway",
+        "React Native fundamentals",
+        "Android/iOS release workflow",
+        "Docker fundamentals",
+        "Ubuntu/Linux",
+        "Nginx",
+        "systemd",
+        "Git",
+        "Jira",
+        "Postman",
+        "Cypress fundamentals"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Enterprise ERP & Business Suite",
+      "description": "Developed workflow-driven enterprise modules spanning frontend screens, Spring Boot services and database routines aligned with client operations.",
+      "highlights": [
+        "Built reusable Angular components, form validation and approval workflows.",
+        "Designed REST endpoints with validation, consistent responses and error handling.",
+        "Supported UAT, production rollout and cross-layer troubleshooting on Linux."
+      ],
+      "technologies": ["Java", "Spring Boot", "Angular", "PostgreSQL", "MySQL", "Linux"],
+      "link": "#contact",
+      "linkLabel": "Discuss the project"
+    },
+    {
+      "name": "LMS & Online Assessment Platform",
+      "description": "Implemented a procedure-driven examination lifecycle covering eligibility, start and resume, question delivery, answers, submission and result review.",
+      "highlights": [
+        "Created typed Next.js screens and stable API integration flows.",
+        "Integrated Spring Boot services with MySQL procedure orchestration.",
+        "Resolved production compatibility issues involving dynamic JSON outputs."
+      ],
+      "technologies": ["Next.js", "TypeScript", "Spring Boot", "MySQL", "REST APIs"],
+      "link": "#contact",
+      "linkLabel": "Request details"
+    },
+    {
+      "name": "Connected Health Mobile Workflows",
+      "description": "Contributed to React Native workflows for connected health devices, focusing on device communication, release support and reliable data exchange with backend services.",
+      "highlights": [
+        "Worked with BLE device integration and mobile session workflows.",
+        "Supported Android build, device testing and release-oriented troubleshooting.",
+        "Coordinated mobile, API and application-state investigation across layers."
+      ],
+      "technologies": ["React Native", "TypeScript", "BLE", "REST APIs", "Android"],
+      "link": "#contact",
+      "linkLabel": "Discuss my contribution"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Full-Stack Developer",
+      "company": "Nirmalya Labs",
+      "period": "2021 – Present",
+      "location": "Bhubaneswar, India",
+      "summary": "Owns enterprise application delivery across requirement analysis, implementation, deployment, UAT and production support.",
+      "responsibilities": [
+        "Translate client business processes into technical specifications, user flows and implementation plans.",
+        "Develop Angular and Next.js interfaces, Spring Boot APIs and PostgreSQL/MySQL database routines.",
+        "Investigate production issues across UI, API, database, Linux, Nginx and systemd layers.",
+        "Support release planning, deployment verification, regression checks and post-release stabilization.",
+        "Prepare technical documentation and guide team members during implementation and issue resolution."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech in Information Technology",
+      "institution": "Orissa Engineering College",
+      "location": "Bhubaneswar, Odisha"
+    }
+  ],
+  "githubApiUrl": "https://api.github.com/user/75715641"
+}
